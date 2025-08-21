@@ -75,6 +75,7 @@ int main() {
 
 		memset(input, 0, sizeof(input));
 		memset(command, 0, sizeof(command));
+		memset(args, 0, sizeof(args));
 	}
 
 	
