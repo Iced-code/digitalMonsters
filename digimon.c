@@ -1,10 +1,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <time.h>
 
 #include "digimon.h"
 
-const char stageNames[5][15] = { "In-Training", "Rookie", "Champion", "Ultimate", "Mega" };
+const char* stageNames[] = { "In-Training", "Rookie", "Champion", "Ultimate", "Mega" };
+const char* species[][NUM_SPECIES] = {
+							{"Koromon", "Agumon", "Greymon", "MetalGreymon", "WarGreymon"},
+							{"Tsunomon", "Gabumon", "Garurumon", "WereGarurumon", "MetalGarurumon"},
+						 };
 
 Digimon* new_digimon(const char* name) {
 	Digimon* digimon = malloc(sizeof(Digimon));
@@ -13,11 +18,20 @@ Digimon* new_digimon(const char* name) {
 		exit(1);
 	}
 
+	
+	srand(time(NULL));
+	//char* family[] = species[(rand() % NUM_SPECIES) + 1];
+
+	//digimon->species_family = malloc(sizeof(species) * NUM_SPECIES);
+	//digimon->species_family = species[(rand() % NUM_SPECIES) + 1];
+	//digimon->species_family = species[7];
+
 	digimon->name = malloc(strlen(name) + 1);
 	strcpy_s(digimon->name, strlen(name) + 1, name);
 	
 	digimon->age = 15;
 	digimon->stage = 0;
+
 
 	return digimon;
 }
@@ -42,6 +56,14 @@ int getStage(const Digimon* digimon) {
 	}
 	return digimon->stage;
 }
+
+char* getSpecies_Family(const Digimon* digimon) {
+	if (!digimon) {
+		return NULL;
+	}
+	return digimon->species_family;
+}
+
 
 void print_digimon(const Digimon* digimon) {
 	if (!digimon) {

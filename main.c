@@ -22,7 +22,7 @@ int main() {
 		inputCount = sscanf_s(input, "%s %s", command, 50, args, 50);
 
 		if (strlen(command) > 0) {
-			if (strcmp(command, "create") == 0 && inputCount == 1) {
+			if (strcmp(command, "add") == 0 && inputCount == 1) {
 				d1 = new_digimon("Koromon");
 
 				if (add_to_party(myParty, d1) == 1) {
@@ -34,7 +34,7 @@ int main() {
 					d1 = NULL;
 				}
 			}
-			if (strcmp(command, "create") == 0 && inputCount == 2) {
+			else if (strcmp(command, "add") == 0 && inputCount == 2) {
 				d1 = new_digimon(args);
 
 				if (add_to_party(myParty, d1) == 1) {
@@ -59,11 +59,23 @@ int main() {
 					d1 = NULL;
 				}
 			}
-			else if (strcmp(command, "info") == 0) {
+			else if (strcmp(command, "info") == 0 && inputCount == 1) {
 				print_party(myParty);
 			}
-			else if (strcmp(command, "quit") == 0) {
-				
+			else if (strcmp(command, "info") == 0 && inputCount == 2) {
+				d1 = getDigimon(myParty, args);
+				if (d1) {
+					print_digimon(d1);
+					d1 = NULL;
+				}
+				else {
+					printf("Digimon does not exist.\n");
+				}
+			}
+			else if (strcmp(command, "help") == 0 && inputCount == 1) {
+				printf("\nadd - Adds Digimon to party.\nadd [name] - Adds Digimon with inputted name to party.\ndelete [name] - Removes Digimon with the inputted from your party.\ninfo - Displays party info.\nninfo [name] - Displays info of inputted Digimon.\nquit - Quits program.\n");
+			}
+			else if (strcmp(command, "quit") == 0) {				
 				delete_party(myParty);
 				printf("\nGoodbye.\n");
 				break;

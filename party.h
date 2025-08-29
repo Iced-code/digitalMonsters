@@ -6,10 +6,8 @@
 
 #include "digimon.h"
 
-#define MAX_NAME_LEN 21
 #define MAX_CAPACITY 3
 
-extern const char stageNames[5][15]; //  = {"In-Training", "Rookie", "Champion", "Ultimate", "Mega"};
 
 typedef struct Party {
 	Digimon** members;
