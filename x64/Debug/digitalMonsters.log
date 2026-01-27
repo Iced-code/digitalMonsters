@@ -1,2 +1,4 @@
-﻿  main.c
+﻿  digimon.c
+C:\Users\dracg\digitalMonsters\digimon.c(22,12): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\dracg\digitalMonsters\digimon.c(70,32): warning C4090: 'return': different 'const' qualifiers
   digitalMonsters.vcxproj -> C:\Users\dracg\digitalMonsters\x64\Debug\digitalMonsters.exe

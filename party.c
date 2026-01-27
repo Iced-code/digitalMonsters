@@ -4,6 +4,7 @@
 
 #include "party.h"
 
+char outputBuffer[50];
 
 Party* make_party(){
 	Party* party = malloc(sizeof(Party));
@@ -122,7 +123,7 @@ void print_party(const Party* party) {
 
 		printf("Your Digimon party:\n\n");
 		for (int i = 0; i < s; i++) {
-			print_digimon(members[i]);
+			print_digimon(members[i], outputBuffer);
 		}
 	}
 }

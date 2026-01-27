@@ -6,7 +6,7 @@
 #include "digimon.h"
 
 const char* stageNames[] = { "In-Training", "Rookie", "Champion", "Ultimate", "Mega" };
-const char* species[][NUM_SPECIES] = {
+const char* species[5][NUM_SPECIES] = {
 							{"Koromon", "Agumon", "Greymon", "MetalGreymon", "WarGreymon"},
 							{"Tsunomon", "Gabumon", "Garurumon", "WereGarurumon", "MetalGarurumon"},
 						 };
@@ -24,7 +24,7 @@ Digimon* new_digimon(const char* name) {
 
 	//digimon->species_family = malloc(sizeof(species) * NUM_SPECIES);
 	//digimon->species_family = species[(rand() % NUM_SPECIES) + 1];
-	//digimon->species_family = species[7];
+	//digimon->species_family = species[7][1];
 
 	digimon->name = malloc(strlen(name) + 1);
 	strcpy_s(digimon->name, strlen(name) + 1, name);
@@ -32,6 +32,12 @@ Digimon* new_digimon(const char* name) {
 	digimon->age = 15;
 	digimon->stage = 0;
 
+	//const char* sprite = " " KC KBLUE "#####\n#  #  #" "\n#  #  #\n #####" RESET;
+	const char* sprite = " " KBLUE "#####\n#  #  #" "\n#  #  #\n #####";
+
+
+	digimon->sprite = malloc(strlen(sprite) + 1);
+	strcpy_s(digimon->sprite, strlen(sprite) + 1, sprite);
 
 	return digimon;
 }
@@ -65,9 +71,10 @@ char* getSpecies_Family(const Digimon* digimon) {
 }
 
 
-void print_digimon(const Digimon* digimon) {
+void print_digimon(const Digimon* digimon, char* buffer) {
 	if (!digimon) {
-		printf("ERROR: No Digimon found.");
+		strcpy_s(buffer, 50, "ERROR: No Digimon found.");
+		// printf("ERROR: No Digimon found.");
 	}
 
 	char* dName = getName(digimon);
@@ -78,11 +85,15 @@ void print_digimon(const Digimon* digimon) {
 		char* stageName = malloc(16);
 		strcpy_s(stageName, strlen(stageNames[dStage]) + 1, stageNames[dStage]);
 		//strncpy_s(stageName, 15, stageNames[dStage], strlen(stageNames[dStage]));
+		
+		printf("\n%s\n", digimon->sprite);
 		printf("\n%s\nAge: %d (%s)\n", dName, dAge, stageName);
+	
 		free(stageName);
 	}
 	else {
-		printf("\nERROR: Could not access this Digimon's info.");
+		strcpy_s(buffer, 50, "\nERROR: Could not access this Digimon's info.");
+		// printf("\nERROR: Could not access this Digimon's info.");
 	}
 }
 
