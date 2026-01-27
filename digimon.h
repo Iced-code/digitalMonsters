@@ -28,10 +28,10 @@ Digimon* new_digimon(const char* name);
 char* getName(const Digimon* digimon);
 int getAge(const Digimon* digimon);
 int getStage(const Digimon* digimon);
+char* getSprite(const Digimon* digimon);
 char* getSpecies_Family(const Digimon* digimon);
 // int calcStage(int age);
 
 void print_digimon(const Digimon* digimon, char* buffer);
 
-//void delete_digimon(Digimon* digimon);
 int delete_digimon(Digimon* digimon);

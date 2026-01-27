@@ -10,14 +10,14 @@ Party* make_party(){
 	Party* party = malloc(sizeof(Party));
 	if (!party) {
 		perror("ERROR: Unable to allocate memory for party.\n");
-		exit(1);
+		exit(-1);
 	}
 
 	party->members = malloc(sizeof(Party) * MAX_CAPACITY);
 	if (!party->members) {
 		perror("ERROR: Unable to allocate memory for party.\n");
 		free(party);
-		exit(1);
+		exit(-1);
 	}
 
 	party->size = 0;
@@ -124,7 +124,9 @@ void print_party(const Party* party) {
 		printf("Your Digimon party:\n\n");
 		for (int i = 0; i < s; i++) {
 			print_digimon(members[i], outputBuffer);
+			printf("%s", outputBuffer);
 		}
+		memset(outputBuffer, 0, sizeof(outputBuffer));
 	}
 }
 

@@ -28,7 +28,7 @@ Digimon* new_digimon(const char* name) {
 
 	digimon->name = malloc(strlen(name) + 1);
 	strcpy_s(digimon->name, strlen(name) + 1, name);
-	
+
 	digimon->age = 15;
 	digimon->stage = 0;
 
@@ -63,6 +63,13 @@ int getStage(const Digimon* digimon) {
 	return digimon->stage;
 }
 
+char* getSprite(const Digimon* digimon) {
+	if (!digimon) {
+		return NULL;
+	}
+	return digimon->sprite;
+}
+
 char* getSpecies_Family(const Digimon* digimon) {
 	if (!digimon) {
 		return NULL;
@@ -84,16 +91,14 @@ void print_digimon(const Digimon* digimon, char* buffer) {
 	if ( dName && dAge >= 0 && (dStage >= 0 && dStage < sizeof(stageNames)) ) {
 		char* stageName = malloc(16);
 		strcpy_s(stageName, strlen(stageNames[dStage]) + 1, stageNames[dStage]);
-		//strncpy_s(stageName, 15, stageNames[dStage], strlen(stageNames[dStage]));
-		
-		printf("\n%s\n", digimon->sprite);
-		printf("\n%s\nAge: %d (%s)\n", dName, dAge, stageName);
+
+		char* dSprite = getSprite(digimon);
+		snprintf(buffer, 100, "\n%s\n\n%s\nAge: %d (%s)\n" RESET, dSprite, dName, dAge, stageName);
 	
 		free(stageName);
 	}
 	else {
 		strcpy_s(buffer, 50, "\nERROR: Could not access this Digimon's info.");
-		// printf("\nERROR: Could not access this Digimon's info.");
 	}
 }
 
@@ -101,11 +106,10 @@ int delete_digimon(Digimon* digimon) {
 	if (digimon) {
 		free(digimon->name);
 		free(digimon);
-		//printf("\nDigimon was deleted.\n");
+
 		return(1);
 	}
 	else {
-		//printf("No Digimon could be found.\n");
 		return(0);
 	}
 }

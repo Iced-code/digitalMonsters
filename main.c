@@ -1,8 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <time.h>
 #include <stdbool.h>
+#include <time.h>
+#include <windows.h>
+
 
 #include "digimon.h"
 #include "party.h"
@@ -16,14 +18,15 @@ int main() {
 	Digimon* d1 = NULL;
 	Party* myParty = make_party();
 
-	char outputBuffer[50];
+	char outputBuffer[100];
+
 
 	printf("Digimon (Digital Monsters) Management Console (v1/2026)\nCreated by Iced-Code\n");
 	printf("\nadd - Adds Digimon to party.\nadd [name] - Adds Digimon with inputted name to party.\ndelete [name] - Removes Digimon with the inputted from your party.\ninfo - Displays party info.\ninfo [name] - Displays info of inputted Digimon.\nclear - Clears program console.\nquit - Quits program.\n\n");
 
-
 	while (true) {
-		printf(RESET "\nInput command: ");
+
+		printf("\nInput command: ");
 		fgets(input, 50, stdin);
 		inputCount = sscanf_s(input, "%s %s", command, 50, args, 50);
 
@@ -33,7 +36,7 @@ int main() {
 
 				if (add_to_party(myParty, d1) == 1) {
 					print_digimon(d1, outputBuffer);
-
+					printf("%s", outputBuffer);
 				}
 				else {
 					free(d1->name);
@@ -46,6 +49,7 @@ int main() {
 
 				if (add_to_party(myParty, d1) == 1) {
 					print_digimon(d1, outputBuffer);
+					printf("%s", outputBuffer);
 				}
 				else {
 					free(d1->name);
@@ -97,6 +101,7 @@ int main() {
 			}
 		}
 
+		memset(outputBuffer, 0, sizeof(outputBuffer));
 		memset(input, 0, sizeof(input));
 		memset(command, 0, sizeof(command));
 		memset(args, 0, sizeof(args));
