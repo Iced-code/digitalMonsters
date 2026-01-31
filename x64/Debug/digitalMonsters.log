@@ -1,10 +1,4 @@
-﻿  digimon.c
-C:\Users\dracg\digitalMonsters\digimon.c(22,12): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\dracg\digitalMonsters\digimon.c(77,32): warning C4090: 'return': different 'const' qualifiers
-  main.c
-  party.c
-C:\Users\dracg\digitalMonsters\party.c(117,19): warning C4090: 'function': different 'const' qualifiers
-C:\Users\dracg\digitalMonsters\party.c(121,39): warning C4090: 'function': different 'const' qualifiers
-C:\Users\dracg\digitalMonsters\party.c(122,24): warning C4090: 'function': different 'const' qualifiers
+﻿  main.c
+  species.c
   Generating Code...
   digitalMonsters.vcxproj -> C:\Users\dracg\digitalMonsters\x64\Debug\digitalMonsters.exe

@@ -1,0 +1,29 @@
+#pragma once
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+#define NUM_STAGES 5
+#define NUM_SPECIES 8
+
+typedef enum SPECIES_ID {
+	AGUMON = 1,
+	GABUMON = 2,
+	BIYOMON = 3,
+	TENTOMON = 4,
+	PALMON = 5,
+	GOMAMON = 6,
+	PATAMON = 7,
+	GATOMON = 8
+} SPECIES_ID;
+
+typedef struct Species {
+	SPECIES_ID ID;
+	char* family[NUM_STAGES];
+} Species;
+
+
+void write_species_file();
+char* readSpeciesFamily();
+void makeFamilies();

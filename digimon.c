@@ -4,18 +4,15 @@
 #include <time.h>
 
 #include "digimon.h"
+#include "species.h"
 
 const char* stageNames[] = { "In-Training", "Rookie", "Champion", "Ultimate", "Mega" };
-const char* species[5][NUM_SPECIES] = {
-							{"Koromon", "Agumon", "Greymon", "MetalGreymon", "WarGreymon"},
-							{"Tsunomon", "Gabumon", "Garurumon", "WereGarurumon", "MetalGarurumon"},
-						 };
 
 Digimon* new_digimon(const char* name) {
 	Digimon* digimon = malloc(sizeof(Digimon));
 	if (!digimon) {
 		perror("ERROR: Unable to allocate memory for Digimon.");
-		exit(1);
+		exit(-1);
 	}
 
 	
@@ -23,17 +20,16 @@ Digimon* new_digimon(const char* name) {
 	//char* family[] = species[(rand() % NUM_SPECIES) + 1];
 
 	//digimon->species_family = malloc(sizeof(species) * NUM_SPECIES);
-	//digimon->species_family = species[(rand() % NUM_SPECIES) + 1];
 	//digimon->species_family = species[7][1];
 
 	digimon->name = malloc(strlen(name) + 1);
 	strcpy_s(digimon->name, strlen(name) + 1, name);
 
 	digimon->age = 15;
-	digimon->stage = 0;
+	//digimon->stage = 0;
+	digimon->stage = IN_TRAINING;
 
-	//const char* sprite = " " KC KBLUE "#####\n#  #  #" "\n#  #  #\n #####" RESET;
-	const char* sprite = " " KBLUE "#####\n#  #  #" "\n#  #  #\n #####";
+	const char* sprite = "" KBLUE "#     #\n #####\n# # # #" "\n#  #  #\n #####";
 
 
 	digimon->sprite = malloc(strlen(sprite) + 1);
@@ -56,12 +52,21 @@ int getAge(const Digimon* digimon) {
 	return digimon->age;
 }
 
-int getStage(const Digimon* digimon) {
+STAGE getStage(const Digimon* digimon) {
 	if (!digimon) {
 		return -1;
 	}
 	return digimon->stage;
 }
+
+/*
+char* getSpecies(const Digimon* digimon) {
+	if (!digimon) {
+		return NULL;
+	}
+	return digimon->species;
+}
+*/
 
 char* getSprite(const Digimon* digimon) {
 	if (!digimon) {
@@ -70,25 +75,26 @@ char* getSprite(const Digimon* digimon) {
 	return digimon->sprite;
 }
 
+/*
 char* getSpecies_Family(const Digimon* digimon) {
 	if (!digimon) {
 		return NULL;
 	}
 	return digimon->species_family;
 }
+*/
 
 
 void print_digimon(const Digimon* digimon, char* buffer) {
 	if (!digimon) {
 		strcpy_s(buffer, 50, "ERROR: No Digimon found.");
-		// printf("ERROR: No Digimon found.");
 	}
 
 	char* dName = getName(digimon);
 	int dAge = getAge(digimon);
-	int dStage = getStage(digimon);
+	STAGE dStage = getStage(digimon);
 
-	if ( dName && dAge >= 0 && (dStage >= 0 && dStage < sizeof(stageNames)) ) {
+	if ( dName && dAge && (dStage >= 0)) {
 		char* stageName = malloc(16);
 		strcpy_s(stageName, strlen(stageNames[dStage]) + 1, stageNames[dStage]);
 

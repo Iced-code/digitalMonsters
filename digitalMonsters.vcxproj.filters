@@ -24,12 +24,18 @@
     <ClCompile Include="party.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="species.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="digimon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="party.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="species.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

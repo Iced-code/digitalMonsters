@@ -5,13 +5,17 @@
 #include <time.h>
 #include <windows.h>
 
+#define SDL_MAIN_HANDLED
+#include "SDL.h"
 
 #include "digimon.h"
 #include "party.h"
 
+#include "species.h"
+
 int main() {
-	char input[50] = "";
-	char command[50] = "";
+	char input[100] = "";
+	char command[100] = "";
 	char args[50];
 	int inputCount= 0;
 
@@ -20,6 +24,12 @@ int main() {
 
 	char outputBuffer[100];
 
+	//readSpeciesFamily();
+	// makeFamilies();
+
+	/*SDL_CreateWindow("Window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 900, 600, 0);
+	SDL_Delay(3000);
+	SDL_Quit();*/
 
 	printf("Digimon (Digital Monsters) Management Console (v1/2026)\nCreated by Iced-Code\n");
 	printf("\nadd - Adds Digimon to party.\nadd [name] - Adds Digimon with inputted name to party.\ndelete [name] - Removes Digimon with the inputted from your party.\ninfo - Displays party info.\ninfo [name] - Displays info of inputted Digimon.\nclear - Clears program console.\nquit - Quits program.\n\n");
@@ -102,9 +112,9 @@ int main() {
 		}
 
 		memset(outputBuffer, 0, sizeof(outputBuffer));
-		memset(input, 0, sizeof(input));
 		memset(command, 0, sizeof(command));
 		memset(args, 0, sizeof(args));
+		memset(input, 0, sizeof(input));
 	}
 
 	

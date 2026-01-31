@@ -1,0 +1,8 @@
+Koromon,Agumon,Greymon,MetalGreymon,WarGreymon
+Tsunomon,Gabumon,Garurumon,WereGarurumon,MetalGarurumon
+Yokomon,Biyomon,Birdramon,Garudamon,Phoenixmon
+Motimon,Tentomon,Kabuterimon,MegaKabuterimon,HerculesKabuterimon
+Tanemon,Palmon,Togemon,Lillymon,Rosemon
+Bukamon,Gomamon,Ikkakumon,Zudomon,Vikemon
+Tokomon,Patamon,Angemon,MagnaAngemon,Seraphimon
+Nyaromon,Salamon,Gatomon,Angewomon,Magnadramon
