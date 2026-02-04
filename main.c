@@ -11,6 +11,7 @@
 #include "digimon.h"
 #include "party.h"
 
+#include "sprite.h"
 #include "species.h"
 
 int main() {
@@ -42,7 +43,7 @@ int main() {
 
 		if (strlen(command) > 0) {
 			if (strcmp(command, "add") == 0 && inputCount == 1) {
-				d1 = new_digimon("Koromon");
+				d1 = new_digimon("");
 
 				if (add_to_party(myParty, d1) == 1) {
 					print_digimon(d1, outputBuffer);

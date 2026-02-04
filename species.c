@@ -38,7 +38,7 @@ char* readSpeciesFamily() {
 	return "h";
 }
 
-SPECIES_ID getSpeciesID(int id) {
+SPECIES_ID getSpecies(int id) {
 	switch (id)
 	{
 	case 1:
@@ -69,6 +69,32 @@ SPECIES_ID getSpeciesID(int id) {
 		break;
 	}
 }
+
+char* getSpeciesName(SPECIES_ID id) {
+	switch (id) {
+		case 1:
+			return "Koromon";
+		case 2:
+			return "Tsunomon";
+		case 3:
+			return "Yokomon";
+		case 4:
+			return "Motimon";
+		case 5:
+			return "Tanemon";
+		case 6:
+			return "Bukamon";
+		case 7:
+			return "Tokomon";
+		case 8:
+			return "Nyaromon";
+		default:
+			break;
+	}
+
+	return "Koromon";
+}
+
 
 char** split(char* string, const char * delimiter) {
 	const char** output = malloc(sizeof(string));

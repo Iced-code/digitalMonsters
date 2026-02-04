@@ -27,6 +27,9 @@
     <ClCompile Include="species.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="sprite.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="digimon.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="species.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -20,11 +20,13 @@ typedef enum SPECIES_ID {
 	GATOMON = 8
 } SPECIES_ID;
 
+SPECIES_ID getSpecies(int id);
+char* getSpeciesName(SPECIES_ID id);
+
 typedef struct Species {
 	SPECIES_ID ID;
 	char* family[NUM_STAGES];
 } Species;
-
 
 void write_species_file();
 char* readSpeciesFamily();

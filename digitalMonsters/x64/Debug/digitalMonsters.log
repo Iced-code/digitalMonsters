@@ -1,3 +1,4 @@
-﻿  main.c
+﻿  sprite.c
+C:\Users\dracg\digitalMonsters\sprite.c(21,2): warning C4047: 'return': 'const char *' differs in levels of indirection from 'errno_t'
   digitalMonsters.vcxproj -> C:\Users\dracg\digitalMonsters\x64\Debug\digitalMonsters.exe
   0 File(s) copied

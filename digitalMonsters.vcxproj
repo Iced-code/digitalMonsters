@@ -175,11 +175,13 @@
     <ClCompile Include="digimon.c" />
     <ClCompile Include="party.c" />
     <ClCompile Include="species.c" />
+    <ClCompile Include="sprite.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="digimon.h" />
     <ClInclude Include="party.h" />
     <ClInclude Include="species.h" />
+    <ClInclude Include="sprite.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

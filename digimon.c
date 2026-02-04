@@ -4,7 +4,6 @@
 #include <time.h>
 
 #include "digimon.h"
-#include "species.h"
 
 const char* stageNames[] = { "In-Training", "Rookie", "Champion", "Ultimate", "Mega" };
 
@@ -22,15 +21,22 @@ Digimon* new_digimon(const char* name) {
 	//digimon->species_family = malloc(sizeof(species) * NUM_SPECIES);
 	//digimon->species_family = species[7][1];
 
-	digimon->name = malloc(strlen(name) + 1);
-	strcpy_s(digimon->name, strlen(name) + 1, name);
+	int species_num = (rand() % NUM_SPECIES) + 1;
+	if (strcmp(name, "") == 0) {
+		digimon->name = malloc(20);
+		strcpy_s(digimon->name, 20, getSpeciesName(species_num));
+	}
+	else {
+		digimon->name = malloc(strlen(name) + 1);
+		strcpy_s(digimon->name, strlen(name) + 1, name);
+	}
 
 	digimon->age = 15;
-	//digimon->stage = 0;
 	digimon->stage = IN_TRAINING;
 
-	const char* sprite = "" KBLUE "#     #\n #####\n# # # #" "\n#  #  #\n #####";
-
+	//const char* sprite = "" KBLUE "#     #\n #####\n# # # #" "\n#  #  #\n #####";
+	const char* sprite = makeSprite(species_num);
+	//digimon->species_id = setSpecies();
 
 	digimon->sprite = malloc(strlen(sprite) + 1);
 	strcpy_s(digimon->sprite, strlen(sprite) + 1, sprite);
@@ -59,15 +65,6 @@ STAGE getStage(const Digimon* digimon) {
 	return digimon->stage;
 }
 
-/*
-char* getSpecies(const Digimon* digimon) {
-	if (!digimon) {
-		return NULL;
-	}
-	return digimon->species;
-}
-*/
-
 char* getSprite(const Digimon* digimon) {
 	if (!digimon) {
 		return NULL;
@@ -75,15 +72,12 @@ char* getSprite(const Digimon* digimon) {
 	return digimon->sprite;
 }
 
-/*
-char* getSpecies_Family(const Digimon* digimon) {
+SPECIES_ID getSpeciesID(const Digimon* digimon) {
 	if (!digimon) {
-		return NULL;
+		return -1;
 	}
-	return digimon->species_family;
+	return digimon->species_id;
 }
-*/
-
 
 void print_digimon(const Digimon* digimon, char* buffer) {
 	if (!digimon) {
@@ -91,15 +85,20 @@ void print_digimon(const Digimon* digimon, char* buffer) {
 	}
 
 	char* dName = getName(digimon);
+	SPECIES_ID dSpeciesID = getSpeciesID(digimon);
 	int dAge = getAge(digimon);
 	STAGE dStage = getStage(digimon);
 
-	if ( dName && dAge && (dStage >= 0)) {
-		char* stageName = malloc(16);
+	if ( dName && dAge && (dStage >= 0) && dSpeciesID) {
+		char* stageName = malloc(20);
 		strcpy_s(stageName, strlen(stageNames[dStage]) + 1, stageNames[dStage]);
+
+		//char* speciesName = malloc(20);
+		//strcpy_s(speciesName, sizeof(speciesName), getSpeciesName(dSpeciesID));
 
 		char* dSprite = getSprite(digimon);
 		snprintf(buffer, 100, "\n%s\n\n%s\nAge: %d (%s)\n" RESET, dSprite, dName, dAge, stageName);
+		//printf("\n%s\n\n%s\nAge: %d (%s)\n" RESET, dSprite, dName, dAge, stageName);
 	
 		free(stageName);
 	}
