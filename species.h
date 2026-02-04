@@ -7,6 +7,8 @@
 #define NUM_STAGES 5
 #define NUM_SPECIES 8
 
+extern const char* agumon_family[NUM_STAGES]; // = { "Koromon","Agumon","Greymon","MetalGreymon","WarGreymon" };
+
 typedef enum SPECIES_ID {
 	AGUMON = 1,
 	GABUMON = 2,

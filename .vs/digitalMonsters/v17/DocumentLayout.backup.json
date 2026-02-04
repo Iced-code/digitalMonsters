@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\dracg\\digitalMonsters\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C63D2392-6B1D-4D8F-98E7-D6A97EBB7F1C}|digitalMonsters.vcxproj|C:\\Users\\dracg\\digitalMonsters\\species.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C63D2392-6B1D-4D8F-98E7-D6A97EBB7F1C}|digitalMonsters.vcxproj|solutionrelative:species.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C63D2392-6B1D-4D8F-98E7-D6A97EBB7F1C}|digitalMonsters.vcxproj|C:\\Users\\dracg\\digitalMonsters\\digimon.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C63D2392-6B1D-4D8F-98E7-D6A97EBB7F1C}|digitalMonsters.vcxproj|solutionrelative:digimon.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C63D2392-6B1D-4D8F-98E7-D6A97EBB7F1C}|digitalMonsters.vcxproj|C:\\Users\\dracg\\digitalMonsters\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C63D2392-6B1D-4D8F-98E7-D6A97EBB7F1C}|digitalMonsters.vcxproj|solutionrelative:main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C63D2392-6B1D-4D8F-98E7-D6A97EBB7F1C}|digitalMonsters.vcxproj|C:\\Users\\dracg\\digitalMonsters\\species.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C63D2392-6B1D-4D8F-98E7-D6A97EBB7F1C}|digitalMonsters.vcxproj|solutionrelative:species.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C63D2392-6B1D-4D8F-98E7-D6A97EBB7F1C}|digitalMonsters.vcxproj|C:\\Users\\dracg\\digitalMonsters\\party.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C63D2392-6B1D-4D8F-98E7-D6A97EBB7F1C}|digitalMonsters.vcxproj|solutionrelative:party.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C63D2392-6B1D-4D8F-98E7-D6A97EBB7F1C}|digitalMonsters.vcxproj|C:\\Users\\dracg\\digitalMonsters\\species.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C63D2392-6B1D-4D8F-98E7-D6A97EBB7F1C}|digitalMonsters.vcxproj|solutionrelative:species.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C63D2392-6B1D-4D8F-98E7-D6A97EBB7F1C}|digitalMonsters.vcxproj|C:\\Users\\dracg\\digitalMonsters\\digimon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C63D2392-6B1D-4D8F-98E7-D6A97EBB7F1C}|digitalMonsters.vcxproj|solutionrelative:digimon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C63D2392-6B1D-4D8F-98E7-D6A97EBB7F1C}|digitalMonsters.vcxproj|C:\\Users\\dracg\\digitalMonsters\\digimon.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C63D2392-6B1D-4D8F-98E7-D6A97EBB7F1C}|digitalMonsters.vcxproj|solutionrelative:digimon.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C63D2392-6B1D-4D8F-98E7-D6A97EBB7F1C}|digitalMonsters.vcxproj|C:\\Users\\dracg\\digitalMonsters\\party.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -38,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 236,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,20 +42,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "digimon.c",
               "DocumentMoniker": "C:\\Users\\dracg\\digitalMonsters\\digimon.c",
               "RelativeDocumentMoniker": "digimon.c",
               "ToolTip": "C:\\Users\\dracg\\digitalMonsters\\digimon.c",
               "RelativeToolTip": "digimon.c",
-              "ViewState": "AgIAAFsAAAAAAAAAAAArwGcAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2026-01-31T22:33:34.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-31T22:33:34.889Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "digimon.h",
               "DocumentMoniker": "C:\\Users\\dracg\\digitalMonsters\\digimon.h",
               "RelativeDocumentMoniker": "digimon.h",
@@ -67,64 +62,49 @@
               "RelativeToolTip": "digimon.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-01-31T20:32:34.284Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-31T20:32:34.284Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "species.c",
               "DocumentMoniker": "C:\\Users\\dracg\\digitalMonsters\\species.c",
               "RelativeDocumentMoniker": "species.c",
               "ToolTip": "C:\\Users\\dracg\\digitalMonsters\\species.c",
               "RelativeToolTip": "species.c",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAuwCQAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAYwGMAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2026-01-27T08:42:12.189Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "species.h",
-              "DocumentMoniker": "C:\\Users\\dracg\\digitalMonsters\\species.h",
-              "RelativeDocumentMoniker": "species.h",
-              "ToolTip": "C:\\Users\\dracg\\digitalMonsters\\species.h",
-              "RelativeToolTip": "species.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-01-30T22:30:13.416Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "main.c",
               "DocumentMoniker": "C:\\Users\\dracg\\digitalMonsters\\main.c",
               "RelativeDocumentMoniker": "main.c",
               "ToolTip": "C:\\Users\\dracg\\digitalMonsters\\main.c",
               "RelativeToolTip": "main.c",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAuwEEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAACcAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-08-19T19:31:13.357Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "party.c",
               "DocumentMoniker": "C:\\Users\\dracg\\digitalMonsters\\party.c",
               "RelativeDocumentMoniker": "party.c",
               "ToolTip": "C:\\Users\\dracg\\digitalMonsters\\party.c",
               "RelativeToolTip": "party.c",
-              "ViewState": "AgIAACQAAAAAAAAAAAArwDkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAkwI0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-08-20T21:08:33.84Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T21:08:33.84Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "party.h",
               "DocumentMoniker": "C:\\Users\\dracg\\digitalMonsters\\party.h",
               "RelativeDocumentMoniker": "party.h",
@@ -132,8 +112,7 @@
               "RelativeToolTip": "party.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-08-21T22:43:02.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T22:43:02.117Z"
             }
           ]
         },

@@ -25,7 +25,7 @@ int main() {
 	char outputBuffer[100];
 
 	//readSpeciesFamily();
-	// makeFamilies();
+	//makeFamilies();
 
 	/*SDL_CreateWindow("Window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 900, 600, 0);
 	SDL_Delay(3000);
@@ -37,8 +37,8 @@ int main() {
 	while (true) {
 
 		printf("\nInput command: ");
-		fgets(input, 50, stdin);
-		inputCount = sscanf_s(input, "%s %s", command, 50, args, 50);
+		fgets(input, 100, stdin);
+		inputCount = sscanf_s(input, "%s %s", command, 100, args, 50);
 
 		if (strlen(command) > 0) {
 			if (strcmp(command, "add") == 0 && inputCount == 1) {

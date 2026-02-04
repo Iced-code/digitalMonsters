@@ -91,6 +91,7 @@ void makeFamilies() {
 	FILE* fptr;
 	errno_t err;
 	char* out = malloc(100);
+	char** output = malloc(100);
 
 	err = fopen_s(&fptr, "species.txt", "r");
 	if (err == 0) {
@@ -105,7 +106,7 @@ void makeFamilies() {
 				if (digimonSpecies[i]) {
 					digimonSpecies[i]->ID = getSpeciesID(i + 1);
 
-					char** output = split(out, ",");
+					output = split(out, ",");
 					for (int j = 0; j < NUM_STAGES; j++) {
 						digimonSpecies[i]->family[j] = output[j];
 					}
@@ -119,8 +120,8 @@ void makeFamilies() {
 			}
 				
 			free(digimonSpecies[i]->family);*/
+			memset(output, 0, sizeof(output));
 			memset(out, 0, sizeof(out));
-
 		}
 
 		free(digimonSpecies);
